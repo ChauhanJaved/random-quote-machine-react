@@ -3,14 +3,11 @@ import "./App.css";
 
 function App() {
   const color = [
-    ['#333333', '#F5F5F5'],    
-    ['#F5F5F5', '#333333'],
-    ['#000080', '#87CEEB'],  
-    ['#FFFFFF', '#0000FF'],
-    ['#006400', '#00FF00'],
-    ['#8B0000', '#FF0000'],
-    ['#800080', '#E6E6FA'],
-    ['#8B4513', '#F5F5DC']
+    "#673AB7", // Deep Purple
+    "#00796B", // Dark Teal
+    "#800000", // Burgundy
+    "#FF5722", // Dark Orange
+    "#004D40"  // Midnight Green
   ];  
   const getRandomColor = () =>{
     return color[Math.floor(Math.random() * color.length)]
@@ -40,8 +37,12 @@ function App() {
         // Update the anchor element's href here
         document.getElementById("tweet-quote").href = tweetUrl;
         const color = getRandomColor();
-        document.body.style.backgroundColor = color[0];
-        document.body.style.color = color[1];
+        document.body.style.backgroundColor = color;
+        document.body.style.color = color;
+        document.getElementById("new-quote").style.backgroundColor = color;
+        document.getElementById("new-quote").style.color = "#FFFFFF";
+        document.getElementById("tweet-quote").style.color = color;
+
       })
       .catch((error) => {
         console.error("Fetch error", error);
@@ -53,11 +54,11 @@ function App() {
       <div id="author">- {author}</div>
       <div id="buttons">
       <a
-          href="https://twitter.com/intent/tweet"
-          target="_blank"
           id="tweet-quote"
-        >
-          <i className="fa fa-twitter"></i>
+          href="https://twitter.com/intent/tweet"
+          target="_blank"          
+        >          
+          Tweet Quote
         </a>
         <button id="new-quote" onClick={fetchQuote}>
           New Quote

@@ -1,99 +1,44 @@
-body{
-    background-color: blue;
-    color: blue;
-    font-family: 'Raleway', sans-serif;
-    font-weight: 400;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 #quote-box {
-    border-radius: 20px;
-    position: relative;
-    width: 450px;
-    padding: 40px 50px;
-    display: table;    
+    border-radius: 10px;
+    background-color: white;    
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
 }
+
 #text {
-    text-align: center;
-    width: 450px;
-    height: auto;
-    clear: both;
-    font-weight: 500;
     font-size: 1.75em;
+    text-align: center;    
 }
-#author{
-  width: 450px;
-  height: auto;
-  clear: both;
-  padding-top: 20px;
-  font-size: 1em;
+
+#author{  
+  margin-top: 10px;  
   text-align: right;  
 }
-#buttons {
-    width: 450px;
-    margin: auto;
-    display: block;
-}
-#tweet-quote{
-    float: left;
-    padding: 0px;
-    padding-top: 8px;
-    text-align: center;
-    font-size: 2em;
-    margin-right: 5px;
-    height: 30px;
-    width: 40px;
-}
-#new-quote {
-    height: 38px;
-    border: none;
-    border-radius: 3px;
-    color: #fff;    
-    outline: none;
-    font-size: 0.85em;
-    padding: 8px 18px 6px 18px;
+
+#buttons {    
     margin-top: 30px;
-    opacity: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tweet-quote{
+  padding: 10px 20px;  
+}
+
+#new-quote {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
     cursor: pointer;
-    float: right;
-}
-.App {
-  text-align: center;
+    border: none;
+    border-radius: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
