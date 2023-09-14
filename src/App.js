@@ -62,8 +62,11 @@ function App() {
   };
   return (
     <div id="quote-box">
-      <div id="text">{quote}</div>
-      <div id="author">- {author}</div>
+      <div id="quote-text">
+        <div id="text">{quote}</div>
+        <div id="author">- {author}</div>
+      </div>
+      
       <div id="buttons">
       <a
           id="tweet-quote"
